@@ -1,24 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Title from './title';
 
 function App() {
+  //console.log(Title)
+  const { examples, questions } = Title
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"></header>
+      <div className="content">
+        <div className="title">examples</div>
+        <ul className="list">
+          {
+            examples.map((item, index) => {
+              if(item.link){
+                return (
+                  <li key={item.id}>
+                    {(<a href={item.link} rel="noopener noreferrer" target={item.target || ''}>{index+1}、{item.name}</a>)}
+                  </li>
+                )
+              } else {
+                return (
+                  <li key={item.id}>
+                    {(<a href={item.link} rel="noopener noreferrer" target={item.target || ''}>{index+1}、{item.name}</a>)}
+                  </li>
+                )
+              }
+            })
+          }
+        </ul>
+
+        <div className="title">questions</div>
+        <ul className="list">
+          {questions.map((item, index) => 
+            <li key={item.id}>
+              {(<a href={item.link} rel="noopener noreferrer" target={item.target}>{index+1}、{item.name}</a>)}
+            </li>
+          )}
+        </ul>
+      </div>
     </div>
   );
 }
