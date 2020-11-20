@@ -27,7 +27,7 @@ export default class ProductTable extends React.Component<IProps> {
 					</tr>
 				</thead>
 				<tbody>
-					{ filterProducts.map(item => 
+					{ filterProducts.map(item =>
 						<ProductRow key={item.name} row={item} />
 					)}
 				</tbody>

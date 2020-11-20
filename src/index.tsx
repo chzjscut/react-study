@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import FilterTable from './views/examples/filter-table/index';
+import RefsDemo from './views/examples/refs-demo/index';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <FilterTable />
+    <RefsDemo />
   </React.StrictMode>,
   document.getElementById('root')
 );

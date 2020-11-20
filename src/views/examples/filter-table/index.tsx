@@ -1,3 +1,8 @@
+/**
+ * 一个支持条件过滤的商品list展示例子，包含了 Context, Fragments 等使用
+ *
+ */
+
 import React from 'react';
 import SearchBar from './SearchBar';
 import ProductTable from './ProductTable';

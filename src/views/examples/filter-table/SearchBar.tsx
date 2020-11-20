@@ -27,7 +27,7 @@ export default class SearchBar extends React.Component<IProps> {
 	}
 
 	render() {
-		let filterParams = this.context
+		//let filterParams = this.context
 		//console.log(filterParams)
 		let { filterText, inStockOnly, filterTextChange } = this.context
 		//const { filterText, inStockOnly } = this.props;
